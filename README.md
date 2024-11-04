@@ -1,9 +1,11 @@
 # 🔥 **Krylos** 🔥
-![GitHub stars](https://img.shields.io/github/stars/Rogue-Payload/krylos?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Rogue-Payload/krylos?style=social)
-![License](https://img.shields.io/github/license/Rogue-Payload/krylos)
+
+[![GitHub stars](https://img.shields.io/github/stars/Rogue-Payload/Krylos?style=social)](https://github.com/Rogue-Payload/Krylos/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Rogue-Payload/Krylos?style=social)](https://github.com/Rogue-Payload/Krylos/network/members)
+[![License](https://img.shields.io/github/license/Rogue-Payload/Krylos)](https://github.com/Rogue-Payload/Krylos/blob/master/LICENSE.md)
 ![Python Version](https://img.shields.io/badge/Python-3.7%2B-blue)
 ![Platform Support](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-orange)
+
 
 ### **Cyber Operations Toolkit for Recon, Injection, and Automation** 🚀
 
