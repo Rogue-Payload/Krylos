@@ -1,0 +1,94 @@
+# config/config.yaml
+
+# Main Configuration for Krylos - Cyber Operations Toolkit
+
+# General Settings
+project_name: "Sample PenTest Operation"
+output_dir: "results/"  # Directory to store logs, summaries, and successful injections
+
+# Proxy and Anonymity Settings
+proxy: true                 # Enable or disable proxy rotation (proxies.txt required)
+tor: true                   # Enable Tor for added anonymity (Tor must be running)
+tor_port: 9050              # Default Tor SOCKS5 port (if different, modify here)
+
+# Modules to Enable
+modules:
+  - requests_module
+  - scapy_module
+  - browser_automation
+  - payload_injector
+  - crypto_module
+
+# Requests Module Configuration
+requests_module:
+  target_file: "config/targets.txt"  # Reference to targets file for URLs/IPs
+  payload_files:                     # Define paths to payload files
+    - "payloads/sqli.txt"
+    - "payloads/xss.txt"
+    - "payloads/rce.txt"
+  rotate_user_agents: true           # Rotate User-Agent headers (user_agents.txt required)
+  max_retries: 3                     # Number of retries for failed requests
+  timeout: 10                        # Timeout for each request in seconds
+
+# Scapy Module Configuration
+scapy_module:
+  target_file: "config/targets.txt"  # Reference to targets file for IPs
+  ports: [22, 80, 443, 8080]         # List of ports to scan
+  custom_packets:                    # Custom packets for specific recon tasks
+    - protocol: "TCP"
+      payload: "custom_payload_here"
+  scan_timeout: 5                    # Timeout in seconds for each port scan
+
+# Browser Automation (Selenium Module) Configuration
+browser_automation:
+  tasks:                             # Define specific tasks or flows
+    - action: "login"
+      url: "http://example2.com/login"
+      credentials:
+        username: "test_user"
+        password: "test_password"
+    - action: "scrape"
+      url: "http://example2.com/dashboard"
+  headless: true                     # Run browser in headless mode (no GUI)
+  timeout: 15                        # Timeout for browser loading in seconds
+
+# Crypto Module Configuration
+crypto_module:
+  encrypt:
+    - data: "Sensitive Data Here"
+      key: "encryptionkey"
+  decrypt:
+    - encrypted_data: "EncryptedDataHere"
+      key: "encryptionkey"
+
+# Payload Injector Configuration
+payload_injector:
+  target_file: "config/targets.txt"   # Reference to targets file for target URLs
+  payload_files:
+    - "payloads/custom_payloads.txt"
+    - "payloads/xss.txt"
+  success_criteria_file: "config/success_criteria.txt"  # Patterns to check in response after injection
+
+# Logging Settings
+logging:
+  log_level: "INFO"                   # Set log level (DEBUG, INFO, WARNING, ERROR)
+  log_to_file: true                   # Save logs to a file
+  log_file: "krylos.log"              # Name of the log file
+  summary_report: "summary_report.txt"  # Summary of the operation
+
+# Session Management
+session_management:
+  cookies_file: "config/cookies.txt"  # Path to cookies for authenticated sessions
+  maintain_session: true              # Keep session across requests
+
+# Output and Report Configuration
+output:
+  save_html_responses: true           # Save HTML responses before and after injection for analysis
+  successful_injections_file: "successful_injections.txt"
+  include_timestamp: true             # Include timestamp in log entries
+
+# Error Handling and Retry Settings
+error_handling:
+  retry_failed_requests: true         # Retry requests that fail initially
+  max_retries: 3                      # Number of retries for each failed request
+  retry_delay: 2                      # Delay in seconds between retries

@@ -1,0 +1,91 @@
+# =======================================
+# Success Criteria for SQL Injection
+# =======================================
+
+# Common error messages indicating potential SQL Injection vulnerability
+"syntax error"
+"SQL syntax"
+"Warning: mysql_fetch"
+"unclosed quotation mark"
+"SQLSTATE[42000]"
+"Microsoft OLE DB Provider for SQL Server"
+"Unrecognized token"
+"unterminated string literal"
+"near unexpected token"
+
+# Common indicators of a successful SQLi query
+"internal server error"
+"you have an error in your SQL syntax"
+"ORA-00933: SQL command not properly ended"
+"Access denied for user"
+"Unknown column"
+
+# =======================================
+# Success Criteria for XSS (Cross-Site Scripting)
+# =======================================
+
+# JavaScript alert messages or indicators in response, typical for XSS testing
+"<script>alert(1)</script>"
+"<script>alert('XSS')</script>"
+"alert(1)"
+"XSS detected"
+
+# Common HTML tags returned if XSS injection succeeds
+"<img src=x onerror=alert(1)>"
+"<svg onload=alert(1)>"
+"<iframe src=javascript:alert(1)>"
+"<body onload=alert(1)>"
+
+# =======================================
+# Success Criteria for LFI (Local File Inclusion)
+# =======================================
+
+# Common file paths or sensitive file names to detect LFI vulnerabilities
+"/etc/passwd"
+"/var/www/html"
+"/apache/logs/access.log"
+"C:\\boot.ini"
+"root:x:0:0:"
+"[boot loader]"
+"Unauthorized access"
+
+# Error messages that might indicate LFI vulnerability
+"Failed to open stream"
+"No such file or directory"
+"Warning: include("
+"Warning: require("
+
+# =======================================
+# Success Criteria for RCE (Remote Code Execution)
+# =======================================
+
+# Indicators that a command executed on the server
+"uid="
+"gid="
+"root:x:"
+"total [0-9]+ blocks"
+"Active Internet connections"
+"Connection to localhost refused"
+"Linux version"
+"uname -a"
+"eth0"
+
+# Error messages or responses indicative of RCE attempts
+"sh: command not found"
+"bash: syntax error"
+"command not recognized"
+"unexpected end of file"
+"cannot execute"
+
+# =======================================
+# Success Criteria for Directory Traversal
+# =======================================
+
+# Typical path traversal strings that may appear in responses
+"../"
+"..\\"
+"%2e%2e%2f"
+"/etc/passwd"
+"C:\\Windows\\System32"
+"boot.ini"
+"Unauthorized access"

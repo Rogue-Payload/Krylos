@@ -1,0 +1,71 @@
+{
+    "http://example.com": [
+        {
+            "name": "session_id",
+            "value": "abc123def456",
+            "domain": "example.com",
+            "path": "/",
+            "expires": 1704067200,  // Unix timestamp for expiration (e.g., Dec 31, 2023)
+            "httpOnly": true,
+            "secure": true
+        },
+        {
+            "name": "auth_token",
+            "value": "xyz789",
+            "domain": "example.com",
+            "path": "/account",
+            "expires": null,
+            "httpOnly": true,
+            "secure": true
+        }
+    ],
+    "https://another-example.com": [
+        {
+            "name": "csrftoken",
+            "value": "d41d8cd98f00b204e9800998ecf8427e",
+            "domain": "another-example.com",
+            "path": "/",
+            "expires": 1704067200,
+            "httpOnly": false,
+            "secure": true
+        },
+        {
+            "name": "user_id",
+            "value": "user_001",
+            "domain": "another-example.com",
+            "path": "/dashboard",
+            "expires": null,
+            "httpOnly": false,
+            "secure": false
+        }
+    ],
+    "https://secure-site.com": [
+        {
+            "name": "SID",
+            "value": "a1b2c3d4e5f6",
+            "domain": "secure-site.com",
+            "path": "/",
+            "expires": 1704067200,
+            "httpOnly": true,
+            "secure": true
+        },
+        {
+            "name": "remember_me",
+            "value": "1",
+            "domain": "secure-site.com",
+            "path": "/",
+            "expires": 1704067200,
+            "httpOnly": true,
+            "secure": true
+        },
+        {
+            "name": "XSRF-TOKEN",
+            "value": "098f6bcd4621d373cade4e832627b4f6",
+            "domain": "secure-site.com",
+            "path": "/",
+            "expires": null,
+            "httpOnly": false,
+            "secure": true
+        }
+    ]
+}

@@ -13,8 +13,8 @@
 
 **Krylos** is a highly advanced, modular cyber-operations toolkit designed to conduct sophisticated network reconnaissance, payload injection, browser automation, and more. With extensive capabilities and support for anonymity via Tor and rotating proxies, Krylos is built to empower ethical hackers, penetration testers, and cyber researchers.
 
-![Demo](https://via.placeholder.com/800x400)  
-<sup>*Example of a dynamic web application penetration test using Krylos.*</sup>
+![Demo](krylos.jpg)  
+<sup>*Krylos: The Most Powerful Payload Injecting Software*</sup>
 
 ---
 
