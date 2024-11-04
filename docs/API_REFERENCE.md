@@ -1,7 +1,7 @@
 # **Krylos API Reference Documentation**
 
 **Version**: 1.0  
-**Last Updated**: [Date]
+**Last Updated**: 11/01/2024
 
 ## Overview
 
