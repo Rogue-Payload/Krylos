@@ -1,6 +1,6 @@
 # CONTRIBUTORS
 
-**Last Updated**: [Date]
+**Last Updated**: 11/01/2024
 
 Thank you to everyone who has contributed to **Krylos**! This document recognizes the individuals and teams who have helped make this project a success through code, documentation, testing, and other valuable contributions.
 
